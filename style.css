@@ -7,86 +7,92 @@
 
 /* ===== VARIABLES ===== */
 :root {
-  --bg: #0e0f13;
-  --bg-secondary: #15171e;
-  --text-main: #e6e6eb;
-  --text-muted: #9a9cab;
-  --accent: #6c8cff;
-  --accent-hover: #8fa3ff;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg-main: #0f172a;       /* основной фон */
+  --bg-card: #111827;       /* карточки */
+  --text-main: #e5e7eb;     /* основной текст */
+  --text-muted: #9ca3af;   /* вторичный текст */
+  --accent: #38bdf8;       /* акцент */
+  --border: #1f2933;
 }
 
-/* ===== GLOBAL ===== */
+/* ===== BASE ===== */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
-  background-color: var(--bg);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--accent-hover);
 }
 
 /* ===== LAYOUT ===== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 24px;
+  padding: 40px 20px;
 }
 
 /* ===== HEADER ===== */
 header {
-  padding: 120px 24px 80px;
-  text-align: center;
+  margin-bottom: 80px;
 }
 
 header h1 {
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
 }
 
 header p {
-  color: var(--text-muted);
   font-size: 18px;
+  color: var(--text-muted);
+  max-width: 600px;
 }
 
-/* ===== SECTIONS ===== */
+/* ===== NAV ===== */
+nav {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ===== SECTION ===== */
 section {
   margin-bottom: 100px;
 }
 
 section h2 {
   font-size: 32px;
-  margin-bottom: 24px;
-  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 /* ===== CARDS ===== */
-.grid {
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
 .card {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px;
-  transition: transform 0.25s ease, border 0.25s ease;
+  border-radius: 14px;
+  padding: 24px;
+  transition: transform 0.2s ease, border 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(108, 140, 255, 0.4);
+  transform: translateY(-4px);
+  border-color: var(--accent);
 }
 
 .card h3 {
@@ -100,30 +106,29 @@ section h2 {
 }
 
 /* ===== BUTTON ===== */
-.btn {
+.button {
   display: inline-block;
-  margin-top: 16px;
-  padding: 10px 18px;
-  border-radius: 999px;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 10px;
   background-color: var(--accent);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  color: #020617;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
-.btn:hover {
-  background-color: var(--accent-hover);
-  transform: translateY(-2px);
+.button:hover {
+  opacity: 0.85;
 }
 
 /* ===== FOOTER ===== */
 footer {
-  padding: 40px 24px;
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
   text-align: center;
   color: var(--text-muted);
   font-size: 14px;
-  border-top: 1px solid var(--border);
 }
 
 /* ===== RESPONSIVE ===== */
