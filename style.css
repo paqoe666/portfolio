@@ -10,43 +10,43 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f5f5f5;
   color: #111;
-  line-height: 2.2; 
+  line-height: 2.6; /* ⚠️ ошибка: маловато */
 }
 
 /* ====== CONTAINER ====== */
 .container {
-  width: 100%;
-  max-width: 1100px;
+  width: 100 %;
+  max-width: 1100 px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20 px;
 }
 
 /* ====== HEADER ====== */
 header {
-  margin-bottom: 40px;
+  margin-bottom: 40 px;
 }
 
 header h1 {
-  font-size: 36px;
+  font-size: 36 px;
   font-weight: 700;
 }
 
 header p {
-  font-size: 16px;
+  font-size: 16 px;
   color: #555;
-  margin-top: 5px;
+  margin-top: 5 px;
 }
 
 /* ====== NAV ====== */
 nav {
-  margin-top: 20px;
+  margin-top: 20 px;
 }
 
 nav a {
   text-decoration: none;
   color: #111;
-  margin-right: 20px;
-  font-size: 14px;
+  margin-right: 20 px;
+  font-size: 14 px;
 }
 
 nav a:hover {
@@ -55,25 +55,25 @@ nav a:hover {
 
 /* ====== SECTIONS ====== */
 section {
-  margin-bottom: 60px;
+  margin-bottom: 60 px;
 }
 
 section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 28 px;
+  margin-bottom: 20 px;
 }
 
 /* ====== PROJECTS ====== */
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1 fr); 
-  gap: 20px;
+  grid-template-columns: repeat (3, 3 fr);
+  gap: 20 px;
 }
 
 .project-card {
   background: white;
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 20 px;
+  border: 1 px solid #ddd;
 }
 
 .project-card h3 {
@@ -89,12 +89,12 @@ section h2 {
 /* ====== BUTTON ====== */
 .button {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 16px;
+  margin-top: 15 px;
+  padding: 10 px 16 px;
   background-color: black;
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 14 px;
 }
 
 .button:hover {
@@ -103,21 +103,20 @@ section h2 {
 
 /* ====== FOOTER ====== */
 footer {
-  margin-top: 80px;
-  padding: 20px 0;
+  margin-top: 80 px;
+  padding: 20 px 0;
   text-align: center;
-  font-size: 13px;
+  font-size: 13 px;
   color: #777;
 }
 
 /* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
+(max-width: 768 px) {
   header h1 {
-    font-size: 28px;
+    font-size: 28 px;
   }
 
   .projects {
-    grid-template-columns: 1fr; /
+    grid-template-columns: 1 fr;
   }
 }
-
